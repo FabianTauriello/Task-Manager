@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/taskListFragment">
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="io.github.fabiantauriello.listmaker.TaskListFragment"
+        android:label="TaskListFragment" >
+        <action
+            android:id="@+id/action_taskListFragment_to_taskListTasksFragment"
+            app:destination="@id/taskListTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskListTasksFragment"
+        android:name="io.github.fabiantauriello.listmaker.TaskListTasksFragment"
+        android:label="TaskListTasksFragment" >
+        <argument
+            android:name="list_string"
+            app:argType="string" />
+    </fragment>
+</navigation>
